@@ -62,11 +62,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting() {
-    Surface(
-        modifier = Modifier
-            .fillMaxSize(),
-        color = Color.White
-    ) {
+
         Column(
             modifier = Modifier
                 .fillMaxWidth(),
@@ -141,7 +137,7 @@ fun Greeting() {
                             onValueChange = {},
                             label = {
                                 Text(text = "Seu peso em Kg",
-                                    color = Color.Black
+                                    color = Color(0xAA000000)
                                 )
                             },
                             colors = OutlinedTextFieldDefaults.colors(
@@ -166,7 +162,7 @@ fun Greeting() {
                             onValueChange = {},
                             label = {
                                 Text(text = "Insira sua altura em cm",
-                                    color = Color.Black
+                                    color = Color(0xAA000000)
                                 )
                             },
                             colors = OutlinedTextFieldDefaults.colors(
@@ -188,7 +184,7 @@ fun Greeting() {
                             .padding(
                                 top = 32.dp
                             )
-                            .height(50.dp)
+                            .height(60.dp)
                             .width(280.dp)
                     ) {
                         Text(
@@ -204,10 +200,12 @@ fun Greeting() {
                     modifier = Modifier
                         .width(300.dp)
                         .height(100.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(color = 0xFF2F9263))
+                    colors = CardDefaults.cardColors(containerColor = Color(color = 0xFF2F9263)),
+                    elevation = CardDefaults.cardElevation(8.dp)
                 ) {
                     Row (
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier
+                            .fillMaxWidth()
                             .fillMaxHeight(),
                         horizontalArrangement = Arrangement.Center,
                         verticalAlignment = Alignment.CenterVertically
@@ -231,7 +229,7 @@ fun Greeting() {
 
         }
     }
-}
+
 
 
 
